@@ -17,6 +17,8 @@ from sklearn.utils import shuffle
 from keras import backend as K
 import json
 import gc
+import tensorflow as tf
+tf.python.control_flow_ops = tf
 
 csv_path = 'driving_log.csv'  # my data (fantastic graphic mode)
 csv_path1 = 'data/driving_log.csv'  # udacity data (fastest graphic mode)

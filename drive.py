@@ -14,10 +14,10 @@ from io import BytesIO
 from keras.models import model_from_json
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array
 import tensorflow as tf
-tf.python.control_flow_ops = tf
+from tensorflow.python.ops import control_flow_ops
 
 num = 0
-Rows, Cols = 64, 64
+Rows, Cols = 128, 128
 steering = []
 def crop_img(image):
     """ crop unnecessary parts """
@@ -57,6 +57,8 @@ def telemetry(sid, data):
     imgString = data["image"]
     image = Image.open(BytesIO(base64.b64decode(imgString)))
     image_pre = np.asarray(image)
+    #image_pre = cv2.resize(image_pre, (128,128))
+    #image_array = image_pre
     image_array = crop_img(image_pre)
     transformed_image_array = image_array[None, :, :, :]
     # This model currently assumes that the features of the model are just the images. Feel free to change this.
