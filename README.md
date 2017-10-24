@@ -1,3 +1,42 @@
+# 변경점
+
+Tensorflow-gpu == 1.3.0에서 작동 가능하도록 코드를 변경하였습니다.
+
+# Pre-Requiredment
+
+1. 요구되는 package를 다음과 같은 명령어로 설치합니다.
+```
+pip3 install -r requirements.txt
+```
+
+2. car-sim 시뮬레이터를 설치합니다.
+
+아래 링크를 통해서 Linux/Mac/Window에서 작동하는 실행파일을 다운로드 할 수 있습니다.
+
+```
+https://github.com/Modu-Self-Driving-Lab/self-driving-car-sim
+```
+
+# Test
+
+1. 먼저 시뮬레이터를 실행합니다. 실행시 옵션은 640x480/Fastest로 합니다.
+
+2. 코드를 아래와 같은 명령어로 실행합니다.
+
+```
+python3 drive.py model.json
+```
+
+```
+만약
+(22805) wsgi starting up on http://0.0.0.0:4567
+라는 메세지가 출력되면, 다음 단계로 넘어갑니다.
+```
+
+3. 시뮬레이터에서 왼쪽 트렉을 선택하고, Autonomous mode를 선택합니다.
+
+4. 작동을 확인합니다.
+
 # End to End Learning for Self-Driving Car
   
   
